@@ -23,28 +23,44 @@ public class Spectacle {
         }
     }*/
 
-    public void addInter(Intervention inter) throws MonException{
+    public void addInter(Intervention inter) throws MonException {
         boolean ajouter = true;
+
+        int debutInter = convertToMinutes(inter.getHeureDebut());
+        int finInter = convertToMinutes(inter.getHeureFin());
+
         for (Intervention intervention : interventions) {
-            if (intervention.equals(inter)){
-                ajouter = false;
+            int debutExist = convertToMinutes(intervention.getHeureDebut());
+            int finExist = convertToMinutes(intervention.getHeureFin());
+
+            if ((debutInter < finExist) && (finInter > debutExist)) {
+                throw new MonException("Conflit d'horaires : une intervention se déroule déjà pendant cette période.");
             }
-            else if (((intervention.getHeureDebut().compareTo(inter.getHeureDebut()) < 0) && (intervention.getHeureFin().compareTo(inter.getHeureFin()) > 0)))
-            {
-                /* continuer a preparer cette erreur */
-            }
-        }
-        if (ajouter){
-            try {
-                interventions.add(inter);
-            } catch (Exception e) {
-                System.out.println("erreur le paramètre donnée n'est pas une intervention");
+
+            if (intervention.equals(inter)) {
+                throw new MonException("L'intervention existe déjà dans le spectacle");
             }
         }
-        else{
-            throw new MonException("l'intervention existe déjà dans le spectacle");
+
+        try {
+            interventions.add(inter);
+        } catch (Exception e) {
+            System.out.println("Erreur : le paramètre donné n'est pas une intervention");
         }
     }
+
+
+    private int convertToMinutes(String heure) throws MonException {
+        try {
+            String[] parts = heure.split("h");
+            int heures = Integer.parseInt(parts[0]);
+            int minutes = Integer.parseInt(parts[1]);
+            return heures * 60 + minutes;
+        } catch (Exception e) {
+            throw new MonException("Format d'heure invalide. Utilisez le format 'HHhMM' (ex : 18h30).");
+        }
+    }
+
 
     public void delInter(Intervention inter) throws MonException{
         boolean supprimer = false;
