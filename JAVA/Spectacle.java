@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Spectacle {
     private String nom;
@@ -22,13 +23,16 @@ public class Spectacle {
         }
     }*/
 
-    public void addInter(Intervention inter){
+    public void addInter(Intervention inter) throws MonException{
         boolean ajouter = true;
         for (Intervention intervention : interventions) {
             if (intervention.equals(inter)){
                 ajouter = false;
             }
-            else if (((interventions.getHeureDebut() > inter.getHeureDebut()) && (interventions.getHeureDebut() < inter.getHeureFin())))
+            else if (((intervention.getHeureDebut().compareTo(inter.getHeureDebut()) < 0) && (intervention.getHeureFin().compareTo(inter.getHeureFin()) > 0)))
+            {
+                /* continuer a preparer cette erreur */
+            }
         }
         if (ajouter){
             try {
@@ -42,7 +46,7 @@ public class Spectacle {
         }
     }
 
-    public void delInter(Intervention inter){
+    public void delInter(Intervention inter) throws MonException{
         boolean supprimer = false;
         for (Intervention intervention : interventions) {
             if (intervention.equals(inter)){
