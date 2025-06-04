@@ -101,7 +101,7 @@ public abstract class Intervention {
         return true;
     }
     
-    public abstract void typeInter();
+    public abstract String typeInter();
     
     
 }
