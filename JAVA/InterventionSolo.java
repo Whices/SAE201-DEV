@@ -13,11 +13,33 @@ public class InterventionSolo extends Intervention{
       return "Intervention : individuelle";
    }
 
-   public void addDanseur(Danseur danseur){
+   public void addDanseur(Danseur danseur) throws MonException {
+      if (danseur == null) {
+         throw new MonException("Le danseur ne peut pas être null.");
+      }
+
+      String danse = getTypeDanse();
+      if (!danseur.getTypeDanse().contains(danse)) {
+         throw new MonException(danseur.getPrenom() + " ne connaît pas le type de danse : " + danse);
+      }
+
+      if (Danseurs.contains(danseur)) {
+         throw new MonException("Ce danseur participe déjà à cette intervention solo.");
+      }
+
       Danseurs.add(danseur);
       danseur.addInterSolo(this);
    }
-   public void delDanseur(Danseur danseur){
+
+   public void delDanseur(Danseur danseur) throws MonException {
+      if (danseur == null) {
+         throw new MonException("Le danseur ne peut pas être null.");
+      }
+
+      if (!Danseurs.contains(danseur)) {
+         throw new MonException("Ce danseur ne participe pas à cette intervention.");
+      }
+
       Danseurs.remove(danseur);
       danseur.delInterSolo(this);
    }

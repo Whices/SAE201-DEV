@@ -79,31 +79,74 @@ public class Danseur {
       return true;
    }
 
-   public Danseur getPartenaire(InterventionCouple inter){
-      return Partenaire.get(inter);
+   public Danseur getPartenaire(InterventionCouple inter) {
+      if (inter == null) {
+         throw new MonException("InterventionCouple ne peut pas être null.");
+      }
+      Danseur partenaire = Partenaire.get(inter);
+      if (partenaire == null) {
+         throw new MonException("Aucun partenaire trouvé pour cette intervention.");
+      }
+      return partenaire;
    }
 
-   public void addInterCouple(InterventionCouple inter, Danseur partenaire){
+   public void addInterCouple(InterventionCouple inter, Danseur partenaire) {
+      if (inter == null || partenaire == null) {
+         throw new MonException("InterventionCouple ou Danseur ne peut pas être null.");
+      }
+      if (Partenaire.containsKey(inter)) {
+         throw new MonException("Cette intervention a déjà un partenaire assigné.");
+      }
       Partenaire.put(inter, partenaire);
    }
 
-   public void delInterCouple(InterventionCouple inter){
+   public void delInterCouple(InterventionCouple inter) {
+      if (inter == null) {
+         throw new MonException("InterventionCouple ne peut pas être null.");
+      }
+      if (!Partenaire.containsKey(inter)) {
+         throw new MonException("Aucune intervention correspondante à supprimer.");
+      }
       Partenaire.remove(inter);
    }
 
-   public void addInterSolo(InterventionSolo inter){
+   public void addInterSolo(InterventionSolo inter) {
+      if (inter == null) {
+         throw new MonException("InterventionSolo ne peut pas être null.");
+      }
+      if (soloInter.contains(inter)) {
+         throw new MonException("InterventionSolo déjà ajoutée.");
+      }
       soloInter.add(inter);
    }
 
-   public void delInterSolo(InterventionSolo inter){
+   public void delInterSolo(InterventionSolo inter) {
+      if (inter == null) {
+         throw new MonException("InterventionSolo ne peut pas être null.");
+      }
+      if (!soloInter.contains(inter)) {
+         throw new MonException("Aucune intervention solo correspondante à supprimer.");
+      }
       soloInter.remove(inter);
    }
 
-   public void addTypeDanse(String typedanse){
+   public void addTypeDanse(String typedanse) {
+      if (typedanse == null || typedanse.trim().isEmpty()) {
+         throw new MonException("Type de danse invalide.");
+      }
+      if (typeDanse.contains(typedanse)) {
+         throw new MonException("Type de danse déjà existant.");
+      }
       typeDanse.add(typedanse);
    }
 
-   public void delTypeDanse(String typedanse){
+   public void delTypeDanse(String typedanse) {
+      if (typedanse == null || typedanse.trim().isEmpty()) {
+         throw new MonException("Type de danse invalide.");
+      }
+      if (!typeDanse.contains(typedanse)) {
+         throw new MonException("Ce type de danse n'existe pas.");
+      }
       typeDanse.remove(typedanse);
    }
 
