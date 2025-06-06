@@ -102,10 +102,5 @@ public abstract class Intervention {
     }
     
     public abstract String getType();
-    
-    
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/Ethan
+
