@@ -6,14 +6,18 @@ public abstract class Intervention {
     private String typeDanse;
     private int nbDanseur;
     private static int compteur = 1;
+    private Professeur responsable;
 
-    public Intervention(String heureDebut, String heureFin, String typeDanse, int nbDanseur) {
+    public Intervention(String heureDebut, String heureFin, String typeDanse, int nbDanseur, Professeur prof) {
         this.idInter = compteur;
         this.heureDebut = heureDebut;
         this.heureFin = heureFin;
         this.typeDanse = typeDanse;
         this.nbDanseur = nbDanseur;
+        this.responsable = prof;
+        prof.ajouterInter(this);
         compteur+=1;
+        
     }
 
     public int getIdInter() {
@@ -40,6 +44,10 @@ public abstract class Intervention {
         return compteur;
     }
 
+    public Professeur getResponsable() {
+        return responsable;
+    }
+
     public void setIdInter(int idInter) {
         this.idInter = idInter;
     }
@@ -58,6 +66,12 @@ public abstract class Intervention {
 
     public void setNbDanseur(int nbDanseur) {
         this.nbDanseur = nbDanseur;
+    }
+
+    public void setResponsable(Professeur prof) {
+        this.responsable.enleverInter(this);
+        this.responsable = prof;
+        prof.ajouterInter(this);
     }
 
     @Override

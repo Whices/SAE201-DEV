@@ -5,7 +5,6 @@ public class Danseur {
    private int age;
    private int id_danseur = 0;
    private static int indice = 0;
-//_____________________________________
 
    public Danseur(String nom,String prenom,int age){
       this.nom = nom;
@@ -14,19 +13,15 @@ public class Danseur {
       this.id_danseur = indice;
       indice++;
    }
-//_____________________________________________________________________________
+
    @Override
    public String toString() {
       return "Danseur [nom=" + nom + ", prenom=" + prenom + ", age=" 
       + age + ", id_danseur=" + id_danseur + "]";
    }
+
    public void afficher(){
       System.out.println(this);
-   }
-
-//_____________________________________________________________________________
-   public void setNom(String nom) {
-      this.nom = nom;
    }
 
    public void setPrenom(String prenom) {
@@ -36,7 +31,6 @@ public class Danseur {
    public void setAge(int age) {
       this.age = age;
    }
-//_____________________________________
 
    public String getNom() {
       return nom;
@@ -49,9 +43,8 @@ public class Danseur {
    public int getAge() {
       return age;
    }
-//_____________________________________________________________________________
 
- @Override
+   @Override
    public boolean equals(Object obj) {
       if (this == obj)
          return true;
@@ -76,5 +69,4 @@ public class Danseur {
          return false;
       return true;
    }
-
 }

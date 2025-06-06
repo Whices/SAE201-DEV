@@ -1,7 +1,9 @@
+import java.util.ArrayList;
 
 public class Professeur {
     private String nom;
     private String prenom;
+    private ArrayList<Intervention> listInter = new ArrayList<>();
 
     public Professeur(String nom, String prenom) {
         this.nom = nom;
@@ -31,5 +33,13 @@ public class Professeur {
     
     public void afficher(){
         System.out.println(this.toString());
+    }
+
+    public void ajouterInter(Intervention inter){
+        this.listInter.add(inter);
+    }
+
+    public void enleverInter(Intervention inter){
+        this.listInter.remove(inter);
     }
 }
