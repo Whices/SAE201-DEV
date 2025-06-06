@@ -1,12 +1,12 @@
 
 public class InterventionCouple extends Intervention{
 
-   public InterventionCouple(String heureDebut, String heureFin, String typeDanse, int nbDanseur) {
-      super(heureDebut, heureFin, typeDanse, nbDanseur);
+   public InterventionCouple(String heureDebut, String heureFin, String typeDanse, int nbDanseur, Professeur prof) {
+      super(heureDebut, heureFin, typeDanse, nbDanseur, prof);
    }
 
    @Override
-   public String typeInter() {
+   public String getType() {
       return "Intervention : en couple";
    }
    

@@ -1,11 +1,11 @@
 public class InterventionSolo extends Intervention{
    
-   public InterventionSolo(String heureDebut, String heureFin, String typeDanse, int nbDanseur){
-      super(heureDebut,heureFin,typeDanse,nbDanseur);
+   public InterventionSolo(String heureDebut, String heureFin, String typeDanse, int nbDanseur, Professeur prof){
+      super(heureDebut,heureFin,typeDanse,nbDanseur,prof);
    }
 
    @Override
-   public String typeInter() {
+   public String getType() {
       return "Intervention : individuelle";
    }
 }
