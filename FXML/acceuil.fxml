@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="600.0">
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="450.0" prefWidth="600.0">
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
@@ -33,122 +32,82 @@
             </HBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <HBox prefHeight="65.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
                      <children>
-                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
+                        <Label fx:id="label_inter_1" alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
                         <HBox alignment="CENTER" maxHeight="65.0" prefHeight="61.0" prefWidth="230.0" spacing="15.0" style="-fx-border-color: black;">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="👁">
+                              <Button fx:id="btn_a_1" mnemonicParsing="false" onAction="#click_a" style="-fx-background-color: none;" text="Afficher">
                                  <font>
-                                    <Font size="22.0" />
+                                    <Font size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🖊">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🗑">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
+                              <Button fx:id="btn_m_1" mnemonicParsing="false" onAction="#click_m" style="-fx-background-color: none;" text="modif" />
+                              <Button fx:id="btn_s_1" mnemonicParsing="false" onAction="#click_s" style="-fx-background-color: none;" text="supr" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="65.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
                      <children>
-                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
+                        <Label fx:id="label_inter_2" alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
                         <HBox alignment="CENTER" maxHeight="65.0" prefHeight="61.0" prefWidth="230.0" spacing="15.0" style="-fx-border-color: black;">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="👁">
+                              <Button fx:id="btn_a_2" mnemonicParsing="false" onAction="#click_a" style="-fx-background-color: none;" text="Afficher">
                                  <font>
-                                    <Font size="22.0" />
+                                    <Font size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🖊">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🗑">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
+                              <Button fx:id="btn_m_2" mnemonicParsing="false" onAction="#click_m" style="-fx-background-color: none;" text="modif" />
+                              <Button fx:id="btn_s_2" mnemonicParsing="false" onAction="#click_s" style="-fx-background-color: none;" text="supr" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="65.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
                      <children>
-                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
+                        <Label fx:id="label_inter_3" alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
                         <HBox alignment="CENTER" maxHeight="65.0" prefHeight="61.0" prefWidth="230.0" spacing="15.0" style="-fx-border-color: black;">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="👁">
+                              <Button fx:id="btn_a_3" mnemonicParsing="false" onAction="#click_a" style="-fx-background-color: none;" text="Afficher">
                                  <font>
-                                    <Font size="22.0" />
+                                    <Font size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🖊">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🗑">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
+                              <Button fx:id="btn_m_3" mnemonicParsing="false" onAction="#click_m" style="-fx-background-color: none;" text="modif" />
+                              <Button fx:id="btn_s_3" mnemonicParsing="false" onAction="#click_s" style="-fx-background-color: none;" text="supr" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="65.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
                      <children>
-                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
+                        <Label fx:id="label_inter_4" alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
                         <HBox alignment="CENTER" maxHeight="65.0" prefHeight="61.0" prefWidth="230.0" spacing="15.0" style="-fx-border-color: black; ">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="👁">
+                              <Button fx:id="btn_a_4" mnemonicParsing="false" onAction="#click_a" style="-fx-background-color: none;" text="Afficher">
                                  <font>
-                                    <Font size="22.0" />
+                                    <Font size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🖊">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🗑">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
+                              <Button fx:id="btn_m_4" mnemonicParsing="false" onAction="#click_m" style="-fx-background-color: none;" text="modif" />
+                              <Button fx:id="btn_s_4" mnemonicParsing="false" onAction="#click_s" style="-fx-background-color: none;" text="supr" />
                            </children>
                         </HBox>
                      </children>
                   </HBox>
-                  <HBox prefHeight="65.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
                      <children>
-                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
+                        <Label fx:id="label_inter_5" alignment="CENTER" prefHeight="65.0" prefWidth="400.0" text="NOM_INTERVENTION" />
                         <HBox alignment="CENTER" maxHeight="65.0" prefHeight="61.0" prefWidth="230.0" spacing="15.0" style="-fx-border-color: black;">
                            <children>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="👁">
+                              <Button fx:id="btn_a_5" mnemonicParsing="false" onAction="#click_a" style="-fx-background-color: none;" text="Afficher">
                                  <font>
-                                    <Font size="22.0" />
+                                    <Font size="13.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🖊">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
-                              <Button mnemonicParsing="false" style="-fx-background-color: none;" text="🗑">
-                                 <font>
-                                    <Font size="22.0" />
-                                 </font>
-                              </Button>
+                              <Button fx:id="btn_m_5" mnemonicParsing="false" onAction="#click_m" style="-fx-background-color: none;" text="modif" />
+                              <Button fx:id="btn_s_5" mnemonicParsing="false" onAction="#click_s" style="-fx-background-color: none;" text="supr" />
                            </children>
                         </HBox>
                      </children>
@@ -158,9 +117,9 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="25.0" />
                </VBox.margin>
             </VBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="590.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Fermer" textAlignment="CENTER">
+                  <Button fx:id="btn_close" mnemonicParsing="false" onAction="#close" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Fermer" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
