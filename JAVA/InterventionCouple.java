@@ -1,11 +1,10 @@
 import java.util.HashMap;
 
 public class InterventionCouple extends Intervention{
-
    private HashMap<Danseur, Danseur> Danseurs = new HashMap<Danseur, Danseur>();
 
-   public InterventionCouple(String heureDebut, String heureFin, String typeDanse, int nbDanseur) {
-      super(heureDebut, heureFin, typeDanse, nbDanseur);
+   public InterventionCouple(String heureDebut, String heureFin, String typeDanse, int nbDanseur, Professeur prof) {
+      super(heureDebut, heureFin, typeDanse, nbDanseur, prof);
    }
 
    @Override
