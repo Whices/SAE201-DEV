@@ -6,7 +6,7 @@ public class InterventionCouple extends Intervention{
    }
 
    @Override
-   public String typeInter() {
+   public String getType() {
       return "Intervention : en couple";
    }
    

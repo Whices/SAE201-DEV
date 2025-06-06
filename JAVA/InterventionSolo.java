@@ -5,7 +5,7 @@ public class InterventionSolo extends Intervention{
    }
 
    @Override
-   public String typeInter() {
+   public String getType() {
       return "Intervention : individuelle";
    }
 }
