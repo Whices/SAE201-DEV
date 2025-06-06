@@ -15,7 +15,7 @@ public abstract class Intervention {
         this.typeDanse = typeDanse;
         this.nbDanseur = nbDanseur;
         this.responsable = prof;
-        prof.ajouterInter(this);
+        prof.addInter(this);
         compteur+=1;
         
     }
@@ -69,9 +69,9 @@ public abstract class Intervention {
     }
 
     public void setResponsable(Professeur prof) {
-        this.responsable.enleverInter(this);
+        this.responsable.delInter(this);
         this.responsable = prof;
-        prof.ajouterInter(this);
+        prof.addInter(this);
     }
 
     @Override
