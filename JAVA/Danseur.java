@@ -1,10 +1,18 @@
-public class Danseur {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 
+public class Danseur {
    private String nom;
    private String prenom;
    private int age;
    private int id_danseur = 0;
    private static int indice = 0;
+   private HashMap<InterventionCouple, Danseur> Partenaire = new HashMap<InterventionCouple, Danseur>();
+   private List<InterventionSolo> soloInter = new ArrayList<>(); 
+   private List<String> typeDanse = new ArrayList<>();
+   
 //_____________________________________
 
    public Danseur(String nom,String prenom,int age){
@@ -75,6 +83,34 @@ public class Danseur {
       if (id_danseur != other.id_danseur)
          return false;
       return true;
+   }
+
+   public Danseur getPartenaire(InterventionCouple inter){
+      return Partenaire.get(inter);
+   }
+
+   public void addInterCouple(InterventionCouple inter, Danseur partenaire){
+      Partenaire.put(inter, partenaire);
+   }
+
+   public void delInterCouple(InterventionCouple inter){
+      Partenaire.remove(inter);
+   }
+
+   public void addInterSolo(InterventionSolo inter){
+      soloInter.add(inter);
+   }
+
+   public void delInterSolo(InterventionSolo inter){
+      soloInter.remove(inter);
+   }
+
+   public void addTypeDanse(String typedanse){
+      typeDanse.add(typedanse);
+   }
+
+   public void delTypeDanse(String typedanse){
+      typeDanse.remove(typedanse);
    }
 
 }
