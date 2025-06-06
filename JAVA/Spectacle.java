@@ -24,7 +24,6 @@ public class Spectacle {
     }*/
 
     public void addInter(Intervention inter) throws MonException {
-        boolean ajouter = true;
 
         int debutInter = convertToMinutes(inter.getHeureDebut());
         int finInter = convertToMinutes(inter.getHeureFin());
