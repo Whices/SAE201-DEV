@@ -74,11 +74,16 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <Label text="Nom responsable :  NOM_PROF">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Nom responsable : ">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField />
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <VBox prefHeight="168.0" prefWidth="590.0">
@@ -94,8 +99,8 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </padding>
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➕ 💃" />
-                        <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➖ 💃" />
+                        <Button fx:id="btn_plus_danseur" mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➕ 💃" />
+                        <Button fx:id="btn_minus_danseur" mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➖ 💃" />
                      </children>
                   </HBox>
                </children>
@@ -105,12 +110,12 @@
             </VBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="590.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Annuler" textAlignment="CENTER">
+                  <Button fx:id="btn_annuler" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Annuler" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Valider" textAlignment="CENTER">
+                  <Button fx:id="bnt_valider" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Valider" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>

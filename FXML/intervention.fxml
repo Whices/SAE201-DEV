@@ -9,11 +9,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox layoutX="10.0" layoutY="10.0" prefHeight="500.0" prefWidth="600.0">
+      <VBox prefHeight="500.0" prefWidth="625.0" style="-fx-border-color: BLACK; -fx-border-width: 2;">
          <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="626.0">
+               <children>
+                  <Button fx:id="btn_edit_inter" mnemonicParsing="false" onAction="#edit" style="-fx-border-color: BLACK; -fx-border-width: 2; -fx-background-color: NONE;" text="EDIT" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
             <HBox alignment="CENTER" prefHeight="51.0" prefWidth="634.0">
                <children>
                   <Label alignment="CENTER" prefHeight="30.0" prefWidth="582.0" text="NOM_INTERVENTION">
@@ -31,17 +41,17 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="145.0" prefWidth="590.0" spacing="20.0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="136.0" prefWidth="280.0" spacing="40.0" style="-fx-border-color: black; -fx-border-width: 2;">
+                  <VBox alignment="CENTER_LEFT" prefHeight="136.0" prefWidth="280.0" spacing="40.0" style="-fx-border-color: black; -fx-border-width: 2;">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                      <children>
-                        <Label prefHeight="18.0" prefWidth="262.0" text="Heure de debut : HEURE_DEBUT">
+                        <Label prefHeight="22.0" prefWidth="122.0" text="Heure de debut : ">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="18.0" prefWidth="262.0" text="Heure de fin: HEURE_FIN">
+                        <Label prefHeight="22.0" prefWidth="122.0" text="Heure de fin: ">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -75,8 +85,8 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 2;">
                      <children>
-                        <ListView prefHeight="200.0" prefWidth="500.0" />
-                        <ListView prefHeight="200.0" prefWidth="500.0" />
+                        <ListView fx:id="list_danseur_solo" prefHeight="200.0" prefWidth="500.0" />
+                        <ListView fx:id="list_danseur_couple" prefHeight="200.0" prefWidth="500.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="53.0" prefWidth="581.0">
@@ -84,8 +94,8 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" />
                      </padding>
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➕ 💃" />
-                        <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➖ 💃" />
+                        <Button fx:id="btn_plus_danseur" mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➕ 💃" />
+                        <Button fx:id="btn_minus_danseur" mnemonicParsing="false" prefWidth="100.0" style="-fx-border-color: black; -fx-background-color: none; -fx-border-width: 2;" text="➖ 💃" />
                      </children>
                   </HBox>
                </children>
@@ -95,12 +105,12 @@
             </VBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="590.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Annuler" textAlignment="CENTER">
+                  <Button fx:id="btn_annuler" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Annuler" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Valider" textAlignment="CENTER">
+                  <Button fx:id="btn_valider" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" style="-fx-border-width: 2; -fx-border-color: black; -fx-background-color: none;" text="Valider" textAlignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
